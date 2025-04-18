@@ -3,11 +3,18 @@ College project for semi-working chatbot
 
 -------------------------------------------------------------------------
 
-NOTE: requires fastapi, uvicorn, transformers, torch to be installed
+NOTE: requires python, fastapi, uvicorn, transformers, torch to be installed
 
 --------------------------------------------------------------------------
 
-begin new environment using 'venv\Scripts\activate' in windows cmd
+create a new file solely for the AI, call it whatever
+
+create new environment using 'venv\Scripts\activate' in windows cmd
+
+(if you dont have the necessary tools, do this, otherwise just continue:
+in windows cmd, do 'pip install fastapi uvicorn transformers torch'. 
+this downloads all the stuff you need directly into the ai folder without 
+having to go through arduous tasks to get the tools)
 
 create file 'chatbot-backend'
 
