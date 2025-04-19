@@ -1,0 +1,14 @@
+INFO:root:2025-04-19 13:38:29.659662 | User: hello, who are you | Bot:  Hello, how are you this evening??? I am a person?
+INFO:root:2025-04-19 13:51:02.452102 | User: hello whats your name? | Bot:  Hello, my name is samantha. How are you today?.
+INFO:root:2025-04-19 13:57:01.004215 | User: what is your name | Bot:  Hi, how are you doing today??? My name is
+INFO:root:2025-04-19 13:59:01.397482 | User: What is your name? | Bot:  Hi, how are you doing today??? My name is?
+INFO:root:2025-04-19 14:04:00.353198 | User: Hi, what’s your name? | Bot:  Hi, my name is jane. How are you today?.
+INFO:root:2025-04-19 14:52:41.326371 | User: whats your name? | Bot: Hello, my name is john. How are you today?
+INFO:root:2025-04-19 14:52:59.267507 | User: no your name is ProdAI | Bot: Hi, how are you doing today? I am fine, how about you?
+INFO:root:2025-04-19 14:55:03.860326 | User: whats your job? | Bot: I work as a Product Specialist for a company that sells online tech products.
+INFO:root:2025-04-19 14:56:48.288822 | User: What is your name? | Bot: Hi, my name is samantha. How are you doing today?
+INFO:root:2025-04-19 15:41:01.288632 | User: whats your name? | Bot: Hello, my name is john. How are you today?
+INFO:root:2025-04-19 15:43:11.399490 | User: whats your name? | Bot: Hello, my name is john. How are you today?
+INFO:root:2025-04-19 15:51:33.236157 | User: Hello, whats your name? | Bot: Hello, my name is robert. How are you today?
+INFO:root:2025-04-19 15:53:25.570322 | User: What is your return policy? | Bot: I do not have a return policy, but I do offer a 30 day money back guarantee.
+INFO:root:2025-04-19 16:04:33.763235 | User: What is your name? | Bot: Hi, my name is john. How are you doing today?

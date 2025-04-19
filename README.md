@@ -25,3 +25,13 @@ begin local server using 'uvicorn main:app --reload' in cmd
 pray the bot loads in :)
 
 its still extremely rough, be patient, it's not your computer's fault, the bots load slowly
+
+# backend-requirements
+fastapi
+uvicorn
+transformers
+torch
+sentence-transformers
+faiss-cpu
+websockets
+python-dotenv
