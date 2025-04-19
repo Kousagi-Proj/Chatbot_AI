@@ -1,12 +1,12 @@
 import React from 'react';
-import Chat from './pages/Chat';
+import OutletRoutes from './pages/OutletRoutes';
+import './App.css'
 
 function App() {
 
   return (
     <>
-     <h1>ProdAI Chatbot</h1>
-     <Chat />
+      <OutletRoutes />
     </>
   )
 }
