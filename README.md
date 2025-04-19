@@ -26,6 +26,7 @@ pray the bot loads in :)
 
 its still extremely rough, be patient, it's not your computer's fault, the bots load slowly
 
+
 # backend-requirements
 fastapi
 uvicorn
