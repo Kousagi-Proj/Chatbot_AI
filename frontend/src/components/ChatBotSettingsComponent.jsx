@@ -1,78 +1,79 @@
-import React, { useState, useEffect, useRef } from "react";
-import "../styles/style.css";
-
+import React from "react";
+import "../styles/cb-settings.css";
 export default function ChatBotSettingsComponent() {
-  const [messages, setMessages] = useState([]);
-  const [input, setInput] = useState("");
-  const [context, setContext] = useState("");
-  const [faqQ, setFaqQ] = useState("");
-  const [faqA, setFaqA] = useState("");
-  const socket = useRef(null);
-
-  useEffect(() => {
-    socket.current = new WebSocket("ws://localhost:8000/ws");
-    socket.current.onmessage = (event) => {
-      setMessages((prev) => [...prev, { type: "bot", text: event.data }]);
-    };
-    return () => socket.current.close();
-  }, []);
-
-  const sendMessage = () => {
-    if (!input) return;
-    socket.current.send(input);
-    setMessages((prev) => [...prev, { type: "user", text: input }]);
-    setInput("");
-  };
-
-  const updateContext = async () => {
-    await fetch("http://localhost:8000/update-context", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ context }),
-    });
-  };
-
-  const updateFAQ = async () => {
-    await fetch("http://localhost:8000/update-faq", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ question: faqQ, answer: faqA }),
-    });
-  };
-
   return (
-    <div className="chat">
-      <div className="chat-window">
-        {messages.map((msg, index) => (
-          <div key={index} className={`message ${msg.type}`}>
-            <strong>{msg.type === "user" ? "User" : "ProdAI"}:</strong>{" "}
-            {msg.text}
-          </div>
-        ))}
+    <div className="cb-settings-container">
+      <div className="cbs-header">
+        <div className="cbs-left">
+          <h1>Chatbots 💬</h1>
+          <p>Create and manage your chats.</p>
+        </div>
+        <button className="cbs-header-btn">+ Create new Chatbot</button>
       </div>
-      <input
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-        placeholder="Type a message"
-      />
-      <button onClick={sendMessage}>Send</button>
+      <div className="cbs-body">
+        <div className="cbs-sidebar">
+          <ul>
+            <li style={{ fontWeight: 600 }}>Chatbot</li>
+            <li>Knowledge</li>
+            <li>Corrections</li>
+            <li>Behavior</li>
+            <li>Settings</li>
+            <li>Install</li>
+          </ul>
+        </div>
+        <div className="cbs-content">
+          <div style={{ fontWeight: 600 }}>
+            <p>Logo</p>
+            <div className="sidebar-logo-group" style={{ paddingLeft: "1vw" }}>
+              <div className="sb-logo-box"></div>
+            </div>
+          </div>
+          <div className="cbs-pbody">
+            <p>Headline</p>
+            <p>Chat with our AI</p>
+          </div>
+          <div className="cbs-pbody">
+            <p>Description</p>
+            <p>Ask any question and out AI will answer!</p>
+          </div>
+          <div className="cbs-pbody">
+            <p>Welcome message</p>
+            <p style={{ lineHeight: "2.5vw" }}>
+              Hi there👋<br></br>I'm the AI Assistant<br></br>How can I help you
+              today?
+            </p>
+          </div>
+          <div className="cbs-pbody">
+            <p>Headline</p>
+            <p>Chat with our AI</p>
+          </div>
+          <div>
+            <p style={{ fontWeight: 600 }}>Update Context</p>
+            <input style={{ marginLeft: "1vw" }}></input>
+          </div>
+          <div>
+            <p style={{ fontWeight: 600 }}>Update FAQ</p>
+            <div style={{ marginLeft: "1vw" }}>
+              <input></input>
+            </div>
+          </div>
+        </div>
+        <div className="cbs-chatbox">
+          <div className="cbs-chatbox-out">
+            <div className="cbs-chatbox-top">
+              <h4>Chat with our AI</h4>
+              <p>Ask any question and out AI will answer!</p>
+              <button>New chat</button>
+            </div>
 
-      <h3>Update Context</h3>
-      <textarea value={context} onChange={(e) => setContext(e.target.value)} />
-      <button onClick={updateContext}>Update Context</button>
-
-      <h3>Update FAQ</h3>
-      <input
-        value={faqQ}
-        onChange={(e) => setFaqQ(e.target.value)}
-        placeholder="FAQ Question"
-      />
-      <input
-        value={faqA}
-        onChange={(e) => setFaqA(e.target.value)}
-        placeholder="FAQ Answer"
-      />
-      <button onClick={updateFAQ}>Update FAQ</button>
+            <div className="cbs-chatbox-box">
+              <div className="cbs-chatbox-input">
+                <input placeholder="Type your message here"></input>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
