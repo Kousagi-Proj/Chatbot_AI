@@ -58,6 +58,7 @@ margin-bottom: 2vw;
     margin: 0;
     font-size: 1.6vw;
     font-weight: 600;
+    text-overflow: ellipsis;
 }
 .cbh-tag-group input:last-of-type {
     background: rgba(255, 255, 255, 0.2);
@@ -69,6 +70,7 @@ margin-bottom: 2vw;
     display: inline;
     width: 23%;
     padding: .2vw 1vw;
+    text-overflow: ellipsis;
 }
 .cbh-top{
     display: flex;

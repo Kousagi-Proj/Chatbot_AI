@@ -1,22 +1,15 @@
 import React from "react";
 import "../styles/cb-home.css";
-import { useParams, useOutletContext, useNavigate } from "react-router-dom";
+import { useOutletContext, useNavigate } from "react-router-dom";
 
 export default function ChatBotHomeComponent() {
   const navigate = useNavigate();
-  const { botId } = useParams();
   const { chatBots, setChatBots, addNewBot } = useOutletContext();
-  const botIndex = chatBots.findIndex(
-    (b) => b.name.replace(/\s+/g, "-").toLowerCase() === botId
-  );
-  // const bot = chatBots.find(
-  //   (b) => b.name.replace(/\s+/g, "-").toLowerCase() === botId
-  // );
 
-  const handleChange = (field, value) => {
+  const handleChange = (index, field, value) => {
     const updatedBots = [...chatBots];
-    updatedBots[botIndex] = {
-      ...updatedBots[botIndex],
+    updatedBots[index] = {
+      ...updatedBots[index],
       [field]: value,
     };
     setChatBots(updatedBots);
@@ -69,16 +62,20 @@ export default function ChatBotHomeComponent() {
                 <div className="cbh-tag-group">
                   <input
                     value={bot.name}
-                    onChange={(e) => handleChange("name", e.target.value)}
+                    onChange={(e) =>
+                      handleChange(index, "name", e.target.value)
+                    }
                   ></input>
                   <input
                     value={bot.tag}
-                    onChange={(e) => handleChange("tag", e.target.value)}
+                    onChange={(e) => handleChange(index, "tag", e.target.value)}
                   ></input>
                 </div>
                 <input
                   value={bot.description}
-                  onChange={(e) => handleChange("description", e.target.value)}
+                  onChange={(e) =>
+                    handleChange(index, "description", e.target.value)
+                  }
                 ></input>
               </div>
             </div>
