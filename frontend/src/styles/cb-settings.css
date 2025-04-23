@@ -1,14 +1,17 @@
-.cb-settings-container {
+/* .cb-settings-container {
     width: 100%;
-}
+} */
 .cbs-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 5%;
+    margin-bottom: .5vw;
 }
 .cbs-left{
     line-height: 1vw;
+}
+.cbs-left h1{
+    font-size: 3vw;
 }
 .cbs-left p{
     opacity: .7;
@@ -16,94 +19,108 @@
 .cbs-header-btn{
  background-color: rgb(48, 12, 255);
  border:  0;
- width: 18vw;
- padding: 1vw 1vw;
- height: 100%;
+
+ padding: 1vw 3vw;
  color: white;
  border-radius: 2vw;
  cursor: pointer;
 }
-
 .cbs-body{
+    border-radius: 1vw;
+    padding: 1vw;
+    background-color: rgb(255, 255, 255);
     display: grid;
-    grid-template-columns: 18% 40% 40%;
+    grid-template-columns: 15% 45% auto;
 }
 .cbs-sidebar ul{
     padding: 0;
+    margin: 0;
     line-height: 3vw;
+}
+.cbs-sidebar li{
+    font-size: 1vw;
+}
+.cbs-sidebar li:hover{
+    font-weight: 600;
+    cursor: pointer;
 }
 .cbs-sidebar ul li:not(:first-of-type) {
     opacity: .5;
 }
-.cbs-pbody p:last-of-type{
-    padding-left: 1vw;
-
-}
-.cbs-pbody p:first-of-type{
+.cbs-active {
     font-weight: 600;
-}
-.cbs-content div{
-    margin-bottom: 2.5vw ;
-}
+    background-color: rgb(244, 244, 244);
+    border-radius: .8vw;
+    width: 100%;
+    display: inline;
+    padding: 0.7vw 1vw;
+  }
 .cbs-pbody input{
-    margin-left: 1vw;
-    line-height: .5vw;
+    margin-top: 0;
+    padding: 0.8vw 1vw;    
+    background-color: rgb(244, 244, 244);
+    width: 80%;    
+    border: 0;
+    border-radius: .8vw;
+ }
+.cbs-pbody p{
+    font-weight: 600;    
+    margin-bottom: .5vw;
+}
+.cbs-pbody textarea {
+    min-width: 80%;      
+    max-width: 80%;      
+    min-height: 10vh;
+    max-height:  10vh;
+    padding: 0.8vw 1vw;    
+
+    border: 0;
+    border-radius: 1vw;
+    background-color: rgb(244, 244, 244);
+
 }
 
-.cbs-content input{
+.cbs-content div{
+    margin-bottom:2vw ;
+}
+
+/* .cbs-content input {
     border: 0;
     border-radius: 1vw;
     background-color: rgba(211, 211, 211, 0.45);
-    padding: 3vw 1vw;
-    width: 80%;
-}
+    padding: 2vw 1vw;
+
+} */
 
 .cbs-content p{
-    font-size: 1.15vw;
+    font-size: 1vw;
 }
 
-.cbs-chatbox{
-    align-items: center;
-
+.cbs-ta {
+    width: 80%;      position: relative;
 }
 
-.cbs-chatbox-out{
-    padding: 2vw;
-    border-radius: 1lvw;
+.cbs-ta  textarea{
+    padding: 0.8vw 1vw;    
 
-    background-color: rgb(48, 12, 255);
-}
-.cbs-chatbox-top {
-    text-align: center;
-    color: white;
-}
-.cbs-chatbox-top p{
-    opacity: .6;
-    width: 60%;
-    margin: auto;
-}
-.cbs-chatbox-top h4{
-   line-height: 0vw;
-}
-.cbs-chatbox-top button{
-   border: 0;
-   background-color: rgb(33, 6, 187);
-   color: white;
-   padding: 1vw 2vw;
-   margin-top: 1vw;
-   border-radius: 2vw;
- }
- .cbs-chatbox-box {
-    background-color:white;
-    padding: 1vw;
-    border-radius: 1vw;
-    height: 30vw;
-    margin-top: 7%;
- }
-
- .cbs-chatbox-box input{
-    text-align: center;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 20vh;
+    max-height:  20vh;
     border: 0;
+    border-radius: 1vw;
+    background-color: rgb(244, 244, 244);
+}
+.cbs-ta button {
+    position: absolute;
     bottom: 0;
-    position: relative;
- }
+    right: 0;
+    border: 0;
+    background-color: rgb(33, 6, 187);
+    color: white;
+    padding: 1vw 2vw;
+    cursor: pointer;
+    margin-bottom: 1vw;
+    border-radius: 2vw;
+    z-index: 99;
+}

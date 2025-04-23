@@ -1,0 +1,108 @@
+.cbh-body {
+    gap: 1vw;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    padding-right: 1vw;
+    overflow-y: scroll !important;
+    overflow-x: hidden;
+    height: 83vh;
+    border-radius: 1vw;
+}
+.cbh-box{
+    border-radius: 1vw;
+    width: 100%;
+    background-color: rgb(48, 12, 255);
+    height: 27vh;
+    position: relative;
+}
+.cbh-box button {
+    border: 0;
+    background-color: white;
+    border-radius: 1vw;
+    padding: .6vw 1.2vw;
+    cursor: pointer;
+}
+.cbh-add-box{
+    border: 0;
+    border-radius: 1vw;
+    background-color: rgb(48, 12, 255);
+    height: 27vh;
+    color: white;
+    font-size: 1.2vw;
+    cursor: pointer;
+    font-weight: 600;
+}
+.cbh-box-content {
+    padding: 1vw;
+}
+.cbh-bottom{
+position: absolute;
+bottom: 0;
+line-height: 2vw;
+margin-bottom: 2vw;
+}
+.cbh-bottom input{
+    background-color: transparent;
+    border: 0;
+    color: white;
+}
+.cbh-tag-group{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    line-height: 5vw;
+    width: 100%;
+}
+.cbh-tag-group input:first-of-type {
+    width: 33%;
+    margin: 0;
+    font-size: 1.6vw;
+    font-weight: 600;
+}
+.cbh-tag-group input:last-of-type {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.02);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.115);    
+    display: inline;
+    width: 23%;
+    padding: .2vw 1vw;
+}
+.cbh-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cbh-logo {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 1vw;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.02);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.115);    
+    position: relative;  
+align-content: center;
+}
+.line-group{
+    padding: .1vw .3vw;
+    position: relative;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    
+}
+.cbh-logo-line {
+    justify-content: center;
+    align-self: center;
+    border-radius: 1vw;
+    width: .3vw;
+
+    background-color: white;
+}
+

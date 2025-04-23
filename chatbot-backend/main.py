@@ -62,13 +62,13 @@ async def update_faq_entry(faq: FAQUpdate):
 async def websocket_endpoint(websocket: WebSocket):
     await websocket.accept()
     try:
-        # Bot sends default greeting with context on connect
-        intro = inject_context("What is your name and purpose?")
-        inputs = tokenizer([intro], return_tensors="pt")
-        reply_ids = model.generate(**inputs, max_length=100)
-        response = tokenizer.batch_decode(reply_ids, skip_special_tokens=True)[0]
-        response = clean_response(response)
-        await websocket.send_text(response)
+        # # Bot sends default greeting with context on connect
+        # intro = inject_context("What is your name and purpose?")
+        # inputs = tokenizer([intro], return_tensors="pt")
+        # reply_ids = model.generate(**inputs, max_length=100)
+        # response = tokenizer.batch_decode(reply_ids, skip_special_tokens=True)[0]
+        # response = clean_response(response)
+        # await websocket.send_text(response)
 
         # Handle future messages
         while True:

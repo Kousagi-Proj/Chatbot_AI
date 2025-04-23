@@ -1,0 +1,93 @@
+.cbs-chatbox{
+    align-items: center;
+
+}
+
+.cbs-chatbox-out{
+    padding: 1vw;
+    border-radius: 2vw;
+    width: 26vw;
+    height: 45;
+    float: right;
+    background-color: rgb(48, 12, 255);
+}
+.cbs-chatbox-top {
+    text-align: center;
+    color: white;
+}
+.cbs-chatbox-top p{
+    opacity: .6;
+    width: 60%;
+    margin: auto;
+    font-size: 1vw;
+
+}
+.cbs-chatbox-top h4{
+   line-height: 0vw;
+   font-size: 1.2vw;
+}
+.cbs-chatbox-top button{
+   border: 0;
+   background-color: rgb(33, 6, 187);
+   color: white;
+   padding: 1vw 2vw;
+   margin-top: 1.5vw;
+   border-radius: 2vw;
+   cursor: pointer;
+
+ }
+ .cbs-chatbox-box {
+    background-color:white;
+    padding: 1vw;
+    border-radius: 1vw;
+    height:40vh;
+    margin-top: 7%;
+    display: flex; 
+    position: relative;
+ }
+
+ .cbs-chatbox-input{
+    display: flex;  
+    position: absolute;   
+    bottom: 0;
+    width: 100%;    
+    margin: auto;
+    padding-bottom: 1vw;
+ }
+
+ .cbs-chatbox-input input {
+    border: 0;
+    width:85%;
+    align-items: center;
+
+ }
+.cbs-chatbox-icon {
+ cursor: pointer;
+}
+
+
+.message {
+    margin:1vw;
+    padding: .8vw 1.2vw;
+    border-radius: 1vw;
+ 
+    color: #000;
+    width: 50%;
+    
+  }
+  
+  .message.user {
+    background-color: #e1f5fe;
+    float:  right;
+  }
+  
+  .message.bot {
+    background-color: #f1f8e9;
+    text-align: left;
+    float:  left;
+  }
+.chat-window{
+    width: 100%;
+    height: 90%;
+    overflow-y: scroll;
+}

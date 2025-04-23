@@ -12,3 +12,20 @@ INFO:root:2025-04-19 15:43:11.399490 | User: whats your name? | Bot: Hello, my n
 INFO:root:2025-04-19 15:51:33.236157 | User: Hello, whats your name? | Bot: Hello, my name is robert. How are you today?
 INFO:root:2025-04-19 15:53:25.570322 | User: What is your return policy? | Bot: I do not have a return policy, but I do offer a 30 day money back guarantee.
 INFO:root:2025-04-19 16:04:33.763235 | User: What is your name? | Bot: Hi, my name is john. How are you doing today?
+INFO:root:2025-04-19 16:11:34.366385 | User: Hello, what is your name and purpose? | Bot: Hello, my name is prodai. I work online as a customer service representative.
+INFO:root:2025-04-19 16:11:50.250537 | User: name? | Bot: Hello, my name is samantha. How are you doing today?
+INFO:root:2025-04-19 16:12:36.541161 | User: Hello, what is your purpose? | Bot: Hello, my purpose is to help people with their online purchases. How about you?
+INFO:root:2025-04-20 10:23:12.333596 | User: Hello | Bot: Hello, how are you doing today? My name is
+INFO:root:2025-04-20 10:26:10.813429 | User: Can you help me with a return | Bot: Hi, I can help you with your return. What do you need help with?
+INFO:root:2025-04-20 15:12:38.638302 | User: how do i get 1 million dollars | Bot: Hello, how are you today? I am doing well, how about you?
+INFO:root:2025-04-20 15:12:58.069717 | User:  how do i get 1 million dollars | Bot: That is a lot of money. I am not sure how you would go about doing that.
+INFO:root:2025-04-20 15:14:04.041200 | User: What is your return policy? | Bot: I do not have a return policy, but I am happy to help you with any questions you may have.
+INFO:root:2025-04-20 15:14:29.501063 | User: how to return | Bot: Hi, how are you doing today? I am fine, how about you?
+INFO:root:2025-04-20 15:15:12.519316 | User: help me with a return | Bot: Hello, how are you doing today? I am fine, how about you?
+INFO:root:2025-04-23 16:02:32.679161 | User: hello | Bot: Hello, how are you doing today? My name is
+INFO:root:2025-04-23 16:14:07.355330 | User: yo | Bot: Hello, how are you today? My name is yo
+INFO:root:2025-04-23 16:14:41.504323 | User: whats your purpose | Bot: I work online as a customer service representative for an online retailer. What do you do?
+INFO:root:2025-04-23 16:16:53.722609 | User: yo | Bot: Hello, how are you today? My name is yo
+INFO:root:2025-04-23 16:17:09.584218 | User: whats your name | Bot: Hi, my name is john. How are you today?
+INFO:root:2025-04-23 16:17:55.258724 | User: are you sure | Bot: Yes, I am sure. I work online as a customer service representative.
+INFO:root:2025-04-23 18:17:15.711523 | User: yo | Bot: Hello, how are you today? My name is yo

@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 *{
   font-family: sans-serif;
 
@@ -7,9 +11,11 @@
 }
 
 .main-layout {
+  background-color: rgb(251, 251, 251);
   display: flex;
   width: 100%;
   height: 100vh;
+  overflow-y: hidden;
 }
 
 body{
@@ -33,12 +39,18 @@ body{
   align-items: center;
   text-decoration: none;
 }
+.sb-chat-content{
+  overflow-y: scroll !important;
+    height: 50vh !important;
+}
 .sb-logo-box{
   background-color: black;
   width: 4vw;
   height: 4vw;
   border-radius: 1vw;
   margin-right: 1vw;
+  position: relative;
+  align-content: center;
 }
 .menu-group h4 {
   opacity: .4;
@@ -51,14 +63,37 @@ body{
   display: flex;
   align-items: center;
   gap: 1vw;
-  cursor: pointer;
+  cursor: pointer;    
+  padding: 0vw 1vw;
+  opacity: .5;
 }
 .menu-group ul{
   list-style: none;
-  padding-left: 2vw ;
 }
-
 .menu-group a {
   color: inherit;
   text-decoration: none;
+}
+.active-sidebar {
+  font-weight: 600;
+  background-color: rgb(244, 244, 244);
+  border-radius: .8vw;
+  opacity: 1 !important;
+
+}
+.sb-main-group li {
+  
+}
+.sb-chat-group li{
+  list-style: none;
+  line-height: 3vw;
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  cursor: pointer;    
+  padding: 0vw 1vw;
+}
+
+.menu-group  li:hover{
+  font-weight: 600;
 }
