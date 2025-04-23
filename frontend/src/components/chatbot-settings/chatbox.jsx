@@ -4,7 +4,7 @@ import "../../styles/cb-settings.css";
 import { FaArrowRight } from "react-icons/fa";
 
 export default function ChatBox({ settings }) {
-  const { welcome, headline, boxDescription } = settings;
+  const { color, welcome, headline, boxDescription } = settings;
   const [messages, setMessages] = useState([{ type: "bot", text: welcome }]);
   const [input, setInput] = useState("");
   //   const [context, setContext] = useState("");
@@ -50,13 +50,29 @@ export default function ChatBox({ settings }) {
     setInput("");
   };
 
-  //   const updateContext = async () => {
-  //     await fetch("http://localhost:8000/update-context", {
-  //       method: "POST",
-  //       headers: { "Content-Type": "application/json" },
-  //       body: JSON.stringify({ context }),
-  //     });
-  //   };
+  function darkenColor(hex, percent = 20) {
+    const num = parseInt(hex.replace("#", ""), 16);
+    let r = (num >> 16) - percent;
+    let g = ((num >> 8) & 0x00ff) - percent;
+    let b = (num & 0x0000ff) - percent;
+
+    r = r < 0 ? 0 : r;
+    g = g < 0 ? 0 : g;
+    b = b < 0 ? 0 : b;
+
+    const newColor = `#${((r << 16) | (g << 8) | b)
+      .toString(16)
+      .padStart(6, "0")}`;
+    return newColor;
+  }
+
+  // const updateContext = async () => {
+  //   await fetch("http://localhost:8000/update-context", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify({ context }),
+  //   });
+  // };
 
   //   const updateFAQ = async () => {
   //     await fetch("http://localhost:8000/update-faq", {
@@ -68,11 +84,16 @@ export default function ChatBox({ settings }) {
 
   return (
     <div className="cbs-chatbox">
-      <div className="cbs-chatbox-out">
+      <div className="cbs-chatbox-out" style={{ backgroundColor: color }}>
         <div className="cbs-chatbox-top">
           <h4>{headline}</h4>
           <p>{boxDescription}</p>
-          <button onClick={startNewChat}>New chat</button>
+          <button
+            onClick={startNewChat}
+            style={{ backgroundColor: darkenColor(color) }}
+          >
+            New chat
+          </button>
         </div>
         <div className="cbs-chatbox-box">
           <div

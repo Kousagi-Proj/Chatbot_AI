@@ -30,6 +30,36 @@ export default function ChatBotSettingsComponent() {
     navigate(`/chatbot/${formattedName}`);
   };
 
+  function darkenColor(hex, percent = 40) {
+    const num = parseInt(hex.replace("#", ""), 16);
+    let r = (num >> 16) - percent;
+    let g = ((num >> 8) & 0x00ff) - percent;
+    let b = (num & 0x0000ff) - percent;
+
+    r = r < 0 ? 0 : r;
+    g = g < 0 ? 0 : g;
+    b = b < 0 ? 0 : b;
+
+    const newColor = `#${((r << 16) | (g << 8) | b)
+      .toString(16)
+      .padStart(6, "0")}`;
+    return newColor;
+  }
+
+  const updateContext = async () => {
+    const currentBot = chatBots.find(
+      (b) => b.name.replace(/\s+/g, "-").toLowerCase() === botId
+    );
+
+    if (currentBot && currentBot.context) {
+      await fetch("http://localhost:8000/update-context", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ context: currentBot.context }),
+      });
+    }
+  };
+
   return (
     <div className="cb-settings-container">
       <div className="cbs-header">
@@ -37,7 +67,11 @@ export default function ChatBotSettingsComponent() {
           <h1>Chatbots 💬</h1>
           <p>Create and manage your chats.</p>
         </div>
-        <button className="cbs-header-btn" onClick={handleAddNewBot}>
+        <button
+          className="cbs-header-btn"
+          style={{ backgroundColor: bot.color }}
+          onClick={handleAddNewBot}
+        >
           + Create new Chatbot
         </button>
       </div>
@@ -91,7 +125,12 @@ export default function ChatBotSettingsComponent() {
                 value={bot.context}
                 onChange={(e) => handleChange("context", e.target.value)}
               ></textarea>{" "}
-              <button>Save</button>
+              <button
+                style={{ backgroundColor: darkenColor(bot.color) }}
+                onClick={updateContext}
+              >
+                Update Context
+              </button>
             </div>
           </div>
           {/* <div>

@@ -13,7 +13,7 @@ export default function SideBar({ chatBots }) {
   return (
     <div className="sidebar-container">
       <div className="sidebar-logo-group">
-        <a href="#">
+        <Link to="/home">
           <div className="sb-logo-box">
             <div
               className="line-group"
@@ -25,7 +25,7 @@ export default function SideBar({ chatBots }) {
             </div>
           </div>
           <h1>ProdAI</h1>
-        </a>
+        </Link>
       </div>
       <div className="menu-group">
         <div className="sb-main-group">

@@ -20,7 +20,8 @@ function MainPage() {
       headline: "Chat with our AI",
       boxDescription: "Ask any question and out AI will answer!",
       welcome: `Hi there👋\nI'm the AI Assistant\nHow can I help you today?`,
-      context: "",
+      context:
+        "You are a helpful assistant named ProdAI who purpose is online customer service.",
     };
     setChatBots((prev) => [...prev, newBot]);
     return newBot;
