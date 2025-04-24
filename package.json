@@ -3,7 +3,9 @@
     "concurrently": "^9.1.2"
   },
   "scripts": {
-  "dev": "\"cd ./frontend & npm run dev&\" ",               
-  "start-all": "concurrently \"cd ./chatbot-backend && uvicorn main:app --reload\" \"npm run dev\""
+  "frontend": "cd frontend && npm run dev",
+  "backend": "cd chatbot-backend && uvicorn main:app --reload",
+  "start-all": "concurrently \"npm run backend\" \"npm run frontend\""
 }
+
 }

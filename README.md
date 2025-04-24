@@ -1,33 +1,23 @@
 # Chatbot_AI
-College project for semi-working chatbot
 
--------------------------------------------------------------------------
+# How to run:
+Run backend and frontend in separate terminals at same time in order to run successfully
 
-NOTE: requires python, fastapi, uvicorn, transformers, torch to be installed
+# How to navigate to backend and run:
+-Install backend requirements before
+Type 'cd chatbot-backend' in the terminal and then run 'uvicorn main:app --reload' in terminal to run backend (main.py)
 
---------------------------------------------------------------------------
+# How to navigate to frontend and run:
+-Install frontend requirements before
+Type 'cd frontend' in the terminal and then run 'npm run dev' in terminal to run frontend
 
-create a new file solely for the AI, call it whatever
+# Frontend-requirements
+'npm install' before running the frontend
 
-create new environment using 'venv\Scripts\activate' in windows cmd
+# Backend-requirements
+Create new environment using 'python -m venv 'venv\Scripts\activate'' in windows cmd
 
-(if you dont have the necessary tools, do this, otherwise just continue:
-in windows cmd, do 'pip install fastapi uvicorn transformers torch'. 
-this downloads all the stuff you need directly into the ai folder without 
-having to go through arduous tasks to get the tools)
-
-create file 'chatbot-backend'
-
-place 'main.py' in chatbot-backend
-
-begin local server using 'uvicorn main:app --reload' in cmd
-
-pray the bot loads in :)
-
-its still extremely rough, be patient, it's not your computer's fault, the bots load slowly
-
-
-# backend-requirements
+pip install:
 fastapi
 uvicorn
 transformers
